@@ -1,5 +1,5 @@
 {
-  "name": "@managed-components/google-analytics",
+  "name": "@managed-components/demo",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -15,19 +15,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/managed-components/google-analytics.git"
+    "url": "git+https://github.com/managed-components/demo.git"
   },
   "keywords": [
     "webcm",
     "managed-components",
-    "google-analytics"
+    "demo"
   ],
   "author": "Cloudflare Managed Components Team <managedcomponents@cloudflare.com> (https://blog.cloudflare.com/zaraz-open-source-managed-components-and-webcm/)",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/managed-components/google-analytics/issues"
+    "url": "https://github.com/managed-components/demo/issues"
   },
-  "homepage": "https://github.com/managed-components/google-analytics#readme",
+  "homepage": "https://github.com/managed-components/demo#readme",
   "devDependencies": {
     "@managed-components/types": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.27.0",
