@@ -3,6 +3,7 @@ require('esbuild').buildSync({
   bundle: true,
   minify: true,
   platform: 'node',
+  format: 'esm',
   target: ['esnext'],
   tsconfig: 'tsconfig.build.json',
   outfile: 'dist/index.js',
