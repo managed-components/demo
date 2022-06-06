@@ -14,7 +14,7 @@ export default async function (manager: Manager, settings: ComponentSettings) {
   const myProxiedRoute = manager.proxy('/gate/*', 'http://n-gate.com')
   console.log(`:::: proxies ${myProxiedRoute} to http://n-gate.com`)
 
-  const myStaticFile = manager.serve('/cheese', '../assets/Camembert.jpg')
+  const myStaticFile = manager.serve('/cheese', 'assets/Camembert.jpg')
   console.log(`:::: serves a file at ${myStaticFile}`)
 
   if (settings.ecommerce) {
