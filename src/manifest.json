@@ -1,0 +1,21 @@
+{
+  "name": "Demo Component",
+  "description": "Demo Component",
+  "namespace": "demo",
+  "icon": "assets/demo.svg",
+  "categories": ["Advertising"],
+  "provides": ["events"],
+  "allowCustomFields": true,
+  "permissions": [
+    {
+      "provideEmbed": {
+        "description": "ExampleTool provides an embed you can use in your website",
+        "required": true
+      },
+      "clientFetch": {
+        "description": "ExampleTool uses cookies to attribute sessions more accurately",
+        "required": false
+      }
+    }
+  ]
+}
