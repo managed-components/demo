@@ -1,6 +1,6 @@
 {
   "name": "@managed-components/demo",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -9,6 +9,7 @@
     "lint:fix": "eslint --ext .ts,.js, src --fix",
     "bundle": "node esbuild.js",
     "build": "run-s test lint typecheck bundle",
+    "release": "npm run build && npm version patch && npm publish",
     "typecheck": "tsc --project tsconfig.build.json --noEmit",
     "test": "vitest run --globals --passWithNoTests",
     "test:dev": "vitest --globals --passWithNoTests"
