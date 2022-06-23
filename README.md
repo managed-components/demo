@@ -14,7 +14,7 @@ Find out more about Managed Components [here](https://blog.cloudflare.com/zaraz-
 
 ## 🚀 Quickstart local dev environment
 
-1. Make sure you're running node version >=17.
+1. Make sure you're running node version >=18.
 2. Install dependencies with `npm i`
 3. Run unit test watcher with `npm run test:dev`
 
