@@ -30,10 +30,6 @@
     "access_client_kv": {
       "description": "ExampleTool uses cookies to attribute sessions more accurately",
       "required": true
-    },
-    "client_kv": {
-      "description": "ExampleTool uses cookies to attribute sessions more accurately",
-      "required": true
     }
   }
 }
