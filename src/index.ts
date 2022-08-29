@@ -26,6 +26,21 @@ export default async function (manager: Manager, settings: ComponentSettings) {
     })
   }
 
+  manager.addEventListener('request', event => {
+    console.log('event:', event.payload)
+    console.log('\u{1F6D2} 🧱 Triggered by every request')
+  })
+
+  manager.addEventListener('response', event => {
+    console.log('event:', event.payload)
+    console.log('\u{1F6D2} 🎁 Doing something on response')
+  })
+
+  manager.addEventListener('remarketing', event => {
+    console.log('event:', event.payload)
+    console.log('🛒 Remarketing event was sent to demo component')
+  })
+
   manager.createEventListener('mousemove', async event => {
     const { payload } = event
     console.info('🐁 🪤 Mousemove:', JSON.stringify(payload, null, 2))
