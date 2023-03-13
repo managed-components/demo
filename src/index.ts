@@ -105,7 +105,7 @@ export default async function (manager: Manager, settings: ComponentSettings) {
 
     if (Object.keys(payload || {}).length) {
       const params = new URLSearchParams(payload).toString()
-      fetch(`http://www.example.com/?${params}`)
+      manager.fetch(`http://www.example.com/?${params}`)
     }
   })
 
@@ -139,7 +139,9 @@ export default async function (manager: Manager, settings: ComponentSettings) {
       const location = parameters['location']
       const embed = await manager.useCache('weather-' + location, async () => {
         try {
-          const response = await fetch(`https://wttr.in/${location}?format=j1`)
+          const response = await manager.fetch(
+            `https://wttr.in/${location}?format=j1`
+          )
           const data = await response.json()
           const [summary] = data.current_condition
           const { temp_C } = summary
@@ -156,7 +158,9 @@ export default async function (manager: Manager, settings: ComponentSettings) {
     const location = 'Colombia'
     const widget = await manager.useCache('weather-' + location, async () => {
       try {
-        const response = await fetch(`https://wttr.in/${location}?format=j1`)
+        const response = await manager.fetch(
+          `https://wttr.in/${location}?format=j1`
+        )
         const data = await response.json()
         const [summary] = data.current_condition
         const { temp_C } = summary
