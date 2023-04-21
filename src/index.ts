@@ -84,15 +84,6 @@ export default async function (manager: Manager, settings: ComponentSettings) {
       const num = Math.random()
       client.set('clientNumber', num.toString())
     }
-    // if (parseFloat(clientNumber) > 0.1) {
-    // }
-    client.attachEvent('mousemove')
-
-    client.attachEvent('mousedown')
-    client.attachEvent('historyChange')
-    client.attachEvent('scroll')
-    client.attachEvent('resize')
-    client.attachEvent('resourcePerformanceEntry')
   })
 
   manager.addEventListener('event', async event => {
@@ -121,6 +112,14 @@ export default async function (manager: Manager, settings: ComponentSettings) {
     client.set('user_id', user_id, {
       scope: 'infinite',
     })
+    if (client.get('clientNumber')) {
+      client.attachEvent('mousemove')
+      client.attachEvent('mousedown')
+      client.attachEvent('historyChange')
+      client.attachEvent('scroll')
+      client.attachEvent('resize')
+      client.attachEvent('resourcePerformanceEntry')
+    }
     client.title &&
       client.set('last_page_title', client.title, {
         scope: 'page',
